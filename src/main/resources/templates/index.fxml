@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="418.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gm.tareas.controller.IndexController">
+   <children>
+      <Label layoutX="221.0" layoutY="32.0" text="Sistema de Tareas" textFill="#e63946">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <TableView fx:id="taskTable" layoutX="247.0" layoutY="87.0" onMouseClicked="#loadTaskForm" prefHeight="225.0" prefWidth="360.0">
+         <columns>
+            <TableColumn fx:id="idTaskColumn" prefWidth="41.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="94.0" text="Task" />
+            <TableColumn fx:id="inChargeColumn" prefWidth="139.0" text="In charge" />
+            <TableColumn fx:id="statusColumn" prefWidth="90.0" text="Status" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="29.0" layoutY="87.0" prefHeight="219.0" prefWidth="203.0">
+         <children>
+            <Label layoutX="6.0" prefHeight="28.0" prefWidth="49.0" text="Task" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="68.0" prefHeight="28.0" prefWidth="92.0" text="In charge" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="149.0" text="Status" textFill="#457b9d">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <TextField fx:id="nameTaskText" layoutX="8.0" layoutY="28.0" prefHeight="40.0" prefWidth="195.0" />
+            <TextField fx:id="inChargeText" layoutX="9.0" layoutY="103.0" prefHeight="40.0" prefWidth="189.0" />
+            <TextField fx:id="statusText" layoutX="10.0" layoutY="185.0" prefHeight="40.0" prefWidth="189.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="322.0" prefHeight="79.0" prefWidth="620.0">
+         <children>
+            <Button fx:id="addBtn" layoutX="34.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #1d3557;" onAction="#addTask" text="Add" textFill="#f1faee" />
+            <Button fx:id="modifyBtn" layoutX="134.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #1d3557;" onAction="#modifyTask" text="Update" textFill="#f1faee" />
+            <Button fx:id="deleteBtn" layoutX="234.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #e63946;" onAction="#deleteTask" text="Delete" textFill="#f1faee" />
+            <Button fx:id="cleanBtn" layoutX="334.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #ffd60a;" onAction="#clearForm" text="Clean form" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
